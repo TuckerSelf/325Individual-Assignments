@@ -28,6 +28,16 @@ class Vector{
 
 
 /**
+ * Initializes a vector with a given capacity
+ *
+ * @param int capacity the amount of allocated space
+ * @pre 
+ * @post vec_ptr is capacity, vec_size is 0, and vec_capacity is capacity
+ * 
+ */
+  Vector(int capacity);
+
+/**
  * vector constructor that initializes a dynamic array of appropriate size and copies data from other array
  * to new array
  *
@@ -83,7 +93,6 @@ class Vector{
  * 
  */
   int capacity();
-
 
 /**
  * stores element at the end of a vector
