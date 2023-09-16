@@ -46,7 +46,7 @@ Vector& Vector::operator=(const Vector &other){
 
 int Vector::size(){
   int i = 0;
-  while(vec_prt[i] != nullptr){
+  while(vec_ptr[i] != '\0'){
     vec_size++;
     i++;
   }
@@ -58,19 +58,20 @@ int Vector::capacity(){
 }
 
 void Vector::push_back(int element){
-  if(vec_ptr[size-1] == nullptr)
-    vec_ptr[size-1] = element;
+  if(vec_ptr[vec_size-1] == '\0')
+    vec_ptr[vec_size-1] = element;
   else{
-    reserve(size);
+    reserve(vec_size);
     vec_ptr = new int (vec_capacity);
-    vec_ptr[size-1] = element;
+    vec_ptr[vec_size-1] = element;
   }
 }
 
 void Vector::reserve(int n){
-  if(n > vec_capacity)
+  if(n > vec_capacity){
     vec_capacity = 2*vec_capacity;
     vec_ptr = new int [vec_capacity];
+  }
 }
 
 int& Vector::operator[](unsigned int index){

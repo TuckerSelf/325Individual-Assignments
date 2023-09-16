@@ -7,12 +7,12 @@
  * The declarations of all the functions present in a custom vector class
  */
 
-#indef VECTOR_H
+#ifndef VECTOR_H
 #define VECTOR_H
 
 class Vector{
  private:
-  int *vec_prt;
+  int *vec_ptr;
   int vec_size, vec_capacity;
   
  public:
@@ -129,4 +129,6 @@ class Vector{
  */
   int& operator[](unsigned int index);
   
-}
+};
+
+#endif //VECTOR_H

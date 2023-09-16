@@ -28,26 +28,26 @@ int main() {
 
   char userChoice;
   cout << "Would you like to print the vector? Y/N:";
-  
+  cin >> userChoice;
   printVect(userChoice);
   
   return 0;
 }
 
-void printVect(char choice){
-cin >> choice;
+void printVect(char choice, Vector v){
   cout << endl;
   if(choice == 'N'){
     cout << "Understood." << endl;
-    return 0;
   }
   else if(choice == 'Y'){
     cout << "Printing..." << endl;
-    for(int i=0; i<size; i++)
-      cout << list[i] << endl;
+    for(int i=0; i<v.size(); i++)
+      cout << v[i] << endl;
     cout << "Done Printing." << endl;
   }
-  else
+  else{
     cout << "Invalid choice, please choose again." << endl;
-  printVect(choice);
+    cin >> choice;
+    printVect(choice);
+  }
 }
