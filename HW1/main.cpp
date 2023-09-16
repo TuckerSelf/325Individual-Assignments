@@ -52,7 +52,8 @@ void printVect(char choice, Vector v){
   }
   else if(choice == 'Y' || choice || 'y'){
     cout << "Printing..." << endl;
-    for(int i=0; i<v.size(); i++)
+    int vectSize = v.size();
+    for(int i=0; i<vectSize; i++)
       cout << v[i] << endl;
     cout << "Done Printing." << endl;
   }

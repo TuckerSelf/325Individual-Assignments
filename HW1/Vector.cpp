@@ -47,9 +47,10 @@ Vector& Vector::operator=(const Vector &other){
 int Vector::size(){
   int i = 0;
   while(vec_ptr[i] != '\0'){
-    vec_size++;
     i++;
   }
+  if(i>vec_size)
+    vec_size = i;
   return vec_size;
 }
 
