@@ -10,7 +10,18 @@
 #include <fstream>
 #include "Vector.h"
 
-void printVect(char choice);
+
+/**
+ * prints out a list of values in a vector
+ *
+ * @param char choice whether the user chooses to print the values or not
+ * @param Vector v the vector of which to print
+ * @pre a choice is given by the user and a vector is valid
+ * @return void 
+ * @post the values within the vector
+ * 
+ */
+void printVect(char choice, Vector v);
 
 using namespace std;
 
@@ -29,7 +40,7 @@ int main() {
   char userChoice;
   cout << "Would you like to print the vector? Y/N:";
   cin >> userChoice;
-  printVect(userChoice);
+  printVect(userChoice, list);
   
   return 0;
 }
@@ -48,6 +59,6 @@ void printVect(char choice, Vector v){
   else{
     cout << "Invalid choice, please choose again." << endl;
     cin >> choice;
-    printVect(choice);
+    printVect(choice, v);
   }
 }
