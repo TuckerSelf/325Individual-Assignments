@@ -1,5 +1,5 @@
 /**
- * @file main.cpp
+0;10;1c * @file main.cpp
  * @author Tucker Self
  * @date 2023-09-15
  * @brief Main program file
@@ -52,13 +52,16 @@ void printVect(char choice, Vector v){
   }
   else if(choice == 'Y' || choice || 'y'){
     cout << "Printing..." << endl;
+    //vector size() demonstration
     int vectSize = v.size();
-    for(int i=0; i<vectSize; i++)
+    for(int i=0; i<vectSize; i++){
+      //vector [] operator demonstration
       cout << v[i] << endl;
+    }
     cout << "Done Printing." << endl;
   }
   else{
-    cout << "Invalid choice, please choose again." << endl;
+    cout << "Invalid choice, please choose again:";
     cin >> choice;
     printVect(choice, v);
   }

@@ -21,7 +21,7 @@ Vector::Vector(){
 
 Vector::Vector(int capacity){
   vec_ptr = new int [capacity];
-  vec_size = 0;
+  vec_size = 1;
   vec_capacity = capacity;
 }
 
@@ -59,8 +59,8 @@ int Vector::capacity(){
 }
 
 void Vector::push_back(int element){
-  if(vec_ptr[vec_size-1] == '\0'){
-    vec_ptr[vec_size-1] = element;
+  if(vec_ptr[vec_size] == '\0'){
+    vec_ptr[vec_size] = element;
     vec_size++;
   }
   else{
