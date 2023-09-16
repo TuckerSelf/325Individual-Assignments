@@ -47,10 +47,10 @@ int main() {
 
 void printVect(char choice, Vector v){
   cout << endl;
-  if(choice == 'N'){
+  if(choice == 'N' || choice == 'n'){
     cout << "Understood." << endl;
   }
-  else if(choice == 'Y'){
+  else if(choice == 'Y' || choice || 'y'){
     cout << "Printing..." << endl;
     for(int i=0; i<v.size(); i++)
       cout << v[i] << endl;
