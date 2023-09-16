@@ -59,12 +59,14 @@ int Vector::capacity(){
 }
 
 void Vector::push_back(int element){
-  if(vec_ptr[vec_size-1] == '\0')
+  if(vec_ptr[vec_size-1] == '\0'){
     vec_ptr[vec_size-1] = element;
+    vec_size++;
+  }
   else{
-    reserve(vec_size);
-    vec_ptr = new int (vec_capacity);
+    reserve(vec_size+1);
     vec_ptr[vec_size-1] = element;
+    vec_size++;
   }
 }
 
