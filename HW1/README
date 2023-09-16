@@ -1,0 +1,15 @@
+/**
+ * @file README
+ * @author Tucker Self
+ * @date 2023-09-16
+ * @brief The Custom Vector Assignment
+ * 
+ * The program creates a custom vector class and uses it to make a list of intergers depending on the
+ * user's input.
+ *
+ *
+ * Upon running the ./vector, the code in the main file runs all appropriate tests in order to make sure
+ * the class is working properly. The user may input a positive interger of thier choice, having the vector
+ * "list" expand large enough to contain the number of intergers as it inputs them in numerical order.
+ */
+
