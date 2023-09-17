@@ -1,5 +1,5 @@
 /**
-0;10;1c * @file main.cpp
+ * @file main.cpp
  * @author Tucker Self
  * @date 2023-09-15
  * @brief Main program file
@@ -26,6 +26,7 @@ void printVect(char choice, Vector v);
 using namespace std;
 
 int main() {
+  //vector declaration demonstration
   Vector list(10);
   int userIn;
 
@@ -34,12 +35,21 @@ int main() {
   cout << endl << "Creating vector..." << endl;
 
   for(int i=1; i<userIn; i++){
+    //push_back function demonstration
     list.push_back(i);
   }
+
+  //demonstration of copy vector
+  Vector catalog(list);
   
   char userChoice;
   cout << "Would you like to print the vector? Y/N:";
   cin >> userChoice;
+
+  //demonstration of assignment vector
+  //Vector registry();
+  //registry = catalog;
+  
   printVect(userChoice, list);
   
   return 0;

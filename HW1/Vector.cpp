@@ -26,8 +26,10 @@ Vector::Vector(int capacity){
 }
 
 Vector::Vector(const Vector &other){
-  vec_ptr = other.vec_ptr;
+  vec_ptr = new int [other.vec_capacity];
   vec_size = other.vec_size;
+  for(int i=0;i<other.vec_size; i++)
+    vec_ptr[i] = other.vec_ptr[i];
   vec_capacity = other.vec_capacity;
 }
 
@@ -38,8 +40,10 @@ Vector::~Vector(){
 }
 
 Vector& Vector::operator=(const Vector &other){
-  vec_ptr = other.vec_ptr;
+  vec_ptr = new int [other.vec_capacity];
   vec_size = other.vec_size;
+  for(int i=0;i<other.vec_size; i++)
+    vec_ptr[i] = other.vec_ptr[i];
   vec_capacity = other.vec_capacity;
   return *this;
 }
